@@ -15,6 +15,26 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+          "primary": "#10b981",
+          "primary-focus": "#34d399",
+        },
+        dark: {
+          ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
+          "primary": "#10b981",
+          "primary-focus": "#34d399",
+        },
+      },
+      // "emerald",
+      // "forest",
+      // "light",
+      // "dark",
+    ]
+  }
 }
 export default config
